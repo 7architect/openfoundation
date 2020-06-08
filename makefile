@@ -1,0 +1,2 @@
+dev.init:
+	git pull

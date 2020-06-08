@@ -1,0 +1,6 @@
+[submodule "server"]
+	path = server
+	url = https://github.com/7architect/openfoundation-backend.git
+[submodule "client"]
+	path = client
+	url = https://github.com/7architect/openfoundation-frontend.git

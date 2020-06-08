@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+
+  server:
+    build: server/
+    command: "python manage.py runserver 0.0.0.0:7000"
+    volumes:
+      - ./server:/server
+    ports:
+      - 7000:7000
+
+  client:
+    build: client/
+    command: "npm run dev -- --host 0.0.0.0 --port 3000"
+    volumes:
+      - ./client:/app
+    ports:
+      - 3000:3000
+    depends_on:
+      - server
